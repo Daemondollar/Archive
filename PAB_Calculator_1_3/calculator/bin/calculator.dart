@@ -1,5 +1,27 @@
-import 'package:calculator/calculator.dart' as calculator;
+class Calculator {
+  double bilanganPertama;
+  double bilanganKedua;
 
-void main(List<String> arguments) {
-  print('Hello world: ${calculator.calculate()}!');
+  Calculator(this.bilanganPertama, this.bilanganKedua);
+
+  double tambah() {
+    return bilanganPertama + bilanganKedua;
+  }
+
+  double kurang() {
+    return bilanganPertama - bilanganKedua;
+  }
+
+  double kali() {
+    return bilanganPertama * bilanganKedua;
+  }
+
+  double bagi() {
+    if (bilanganKedua != 0) {
+      return bilanganPertama / bilanganKedua;
+    } else {
+      throw Exception("Pembagian oleh nol tidak diperbolehkan.");
+    }
+  }
 }
+
