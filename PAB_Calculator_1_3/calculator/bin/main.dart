@@ -5,12 +5,12 @@ void main() {
   while (true) {
     try {
       stdout.write("Masukkan bilangan pertama: ");
-      final inputBilanganPertama = double.parse(stdin.readLineSync()!);
+      final firstNumber = double.parse(stdin.readLineSync()!);
 
       stdout.write("Masukkan bilangan kedua: ");
-      final inputBilanganKedua = double.parse(stdin.readLineSync()!);
+      final secondNumber = double.parse(stdin.readLineSync()!);
 
-      final calculator = Calculator(inputBilanganPertama, inputBilanganKedua);
+      final calculator = Calculator(firstNumber, secondNumber);
 
       print("Pilih operasi matematika:");
       print("[1] Tambah");
@@ -18,28 +18,28 @@ void main() {
       print("[3] Kali");
       print("[4] Bagi");
       stdout.write("Pilihan (1/2/3/4): ");
-      final pilihan = stdin.readLineSync();
+      final choice = stdin.readLineSync();
 
-      double hasil;
+      double result;
 
-      switch (pilihan) {
+      switch (choice) {
         case '1':
-          hasil = calculator.tambah();
+          result = calculator.tambah();
           break;
         case '2':
-          hasil = calculator.kurang();
+          result = calculator.kurang();
           break;
         case '3':
-          hasil = calculator.kali();
+          result = calculator.kali();
           break;
         case '4':
-          hasil = calculator.bagi();
+          result = calculator.bagi();
           break;
         default:
           throw Exception("Pilihan operasi tidak valid.");
       }
 
-      print("Hasil perhitungan: $hasil");
+      print("Hasil perhitungan: $result");
 
       stdout.write("Lakukan perhitungan lagi? (Y/T): ");
       final ulangi = stdin.readLineSync();

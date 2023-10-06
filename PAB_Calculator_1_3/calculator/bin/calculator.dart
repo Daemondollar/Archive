@@ -1,24 +1,24 @@
 class Calculator {
-  double bilanganPertama;
-  double bilanganKedua;
+  double firstNumber;
+  double secondNumber;
 
-  Calculator(this.bilanganPertama, this.bilanganKedua);
+  Calculator(this.firstNumber, this.secondNumber);
 
   double tambah() {
-    return bilanganPertama + bilanganKedua;
+    return firstNumber + secondNumber;
   }
 
   double kurang() {
-    return bilanganPertama - bilanganKedua;
+    return firstNumber - secondNumber;
   }
 
   double kali() {
-    return bilanganPertama * bilanganKedua;
+    return firstNumber * secondNumber;
   }
 
   double bagi() {
-    if (bilanganKedua != 0) {
-      return bilanganPertama / bilanganKedua;
+    if (secondNumber != 0) {
+      return firstNumber / secondNumber;
     } else {
       throw Exception("Pembagian oleh nol tidak diperbolehkan.");
     }
